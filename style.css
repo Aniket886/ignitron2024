@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+.container{
+    width:100%;
+    height: 100vh;
+    background:linear-gradient(90deg, #642b73, #c6426e);
+}
+
+.parent{
+    width: 90%;
+    height: 90%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:linear-gradient(135deg, #ffffff, #000000);
+    box-shadow: 5px 5px 20px black;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.parent nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    height: 15%;
+    /* background-color: plum; */
+}
+
+nav h1{
+    font-family: 'Kalam', cursive;
+    font-size: 50px;
+    font-weight: 600;
+    margin-right: 450px;
+    color: #ffffff;
+    position: relative;
+}
+
+nav h1::before{
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+    background:linear-gradient(90deg,rgb(150, 150, 150),rgb(214, 214, 255));
+}
+
+nav ul{
+    display: flex;
+
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+ul li a{
+    text-decoration: none;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    transition: 0.5s ease;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+    
+}
+
+ul li #sub{
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(90deg,#c04848,#480048,#c04848);
+    margin: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    border-radius: 20px;
+}
+
+ul li #sub:hover{
+    background-position: right center;
+}
+
+.parent .main_content{
+    display: flex;
+    height: 85%;
+
+}
+
+.main_content .left{
+    width: 50%;
+    height: 100%;
+    padding: 40px 80px;
+}
+
+.left h3{
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.left h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+.left h1 span{
+    color: rgb(255, 255, 255);
+}
+
+.left p{
+    font-size: 30px;
+    font-weight: 400;
+
+}
+
+/* Apply general styling to the text and button */
+h2 {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 32px;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Style for each event name */
+p br {
+    line-height: 1.5;  /* Adds space between lines */
+}
+
+p span {
+    font-family: 'Alice', serif;
+    font-weight: bold;
+    font-size: 24px; /* Big font size */
+    display: block;  /* Make each event name appear on a new line */
+    margin-bottom: 20px; /* Adds space between event names */
+    color: #555; /* Default color */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for glowing text */
+p span:hover {
+    color: #fff; /* Change text color when hovered */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4); /* Glowing effect */
+}
+
+/* Style for the button */
+button {
+    font-family: 'Alice', serif;
+    display: block;
+    margin-left: 20px; /* Aligns button to the left */
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.left button:hover{
+    background-color: rgb(42,0,93);
+    box-shadow: 0 0 10px white;
+}
+
+.main_content .right{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 100px;
+}
+
+h1 {
+    color: #333;
+}
+.spline-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+spline-viewer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gradient {
+    width: 150vw;  /* Full width of the viewport */
+    height: 200vh;  /* Full height of the viewport */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Zoom out by scaling */
+    border-radius: 50%;
+    background-color: rgb(70, 35, 77);
+    z-index: -1;
+    filter: blur(50px);
+    box-shadow: 0 0 250px rgb(107, 107, 108), 0 0 200px rgb(104, 42, 104), 0 0 150px rgb(204, 0, 255);
+}
